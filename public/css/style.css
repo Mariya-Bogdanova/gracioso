@@ -1,0 +1,31 @@
+body {
+  padding: 10px;
+}
+header {
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgb(211, 244, 255);
+}
+main,
+header,
+#confidentially {
+  display: flex;
+}
+
+.shopLi {
+  display: flex;
+  margin: 20px;
+}
+#confidentially {
+  flex-direction: column;
+  align-items: flex-end;
+  list-style-type: none;
+  margin: 10px;
+}
+#confidentially li {
+  margin: 3px;
+  color: darkred;
+}
+#info {
+font-style: italic;
+}

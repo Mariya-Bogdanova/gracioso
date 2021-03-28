@@ -1,0 +1,46 @@
+<main>
+  <div id="aboutUs">
+    <div>
+      <h3>О нас</h3>
+      <ul>
+        <li>Уникальные предметы вашего интерьера</li>
+        <li>Ручная работа</li>
+        <li>Каждое произведение в одном экземпляре</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Наши Мастера</h3>
+      <ul>
+        <li>Василий Гречанинов</li>
+        <li>Мержоян Калосто</li>
+        <li>Инь Ли</li>
+        <li>Джон Браун</li>
+        <li>Мария Крамаева</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Контакты</h3>
+      <ul>
+        <li>8 (904) 556-55-66</li>
+        <li>gracioso@mail.com</li>
+      </ul>
+      <p></p>
+    </div>
+  </div>
+
+  <ul id="shopList">
+      {{#each articles}}
+    <li class="shopLi">
+      <img src="{{articleImg}}" alt="{{articleTitle}}">
+      <ul>
+        <li>{{articleArticle}}</li>
+        <li>{{articleTitle}}</li>
+        <li>{{articleDescription}}</li>
+        <li>{{articlePrice}} у.е.</li>
+        <li><a href="">Оставить заявку</a></li>
+      </ul>
+    </li>
+    {{/each}}
+  </ul>
+
+</main>
