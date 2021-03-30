@@ -1,0 +1,18 @@
+<form action="/article/{{id}}" method="put" enctype="multipart/form-data" name="updateArticleForm">
+  <input type="hidden" name="_method" value="put">
+
+  <label for="articleTitle">Название:<br>
+    <input id="articleTitle" name="articleTitle" type="text" required value="{{articleTitle}}">
+  </label><br><br>
+  <label for="articleDescription">Описание:<br>
+    <textarea cols="20" rows="5" id="articleDescription" name="articleDescription" type="text" required >{{articleDescription}}</textarea>
+  </label><br><br>
+  <label for="articlePrice">Цена:<br>
+    <input id="articlePrice" name="articlePrice"  type="number" required value="{{articlePrice}}">
+  </label><br><br>
+
+  <label for="articleImg">Фото:<br>
+    <input type="file" name="articleImg" required id="articleImg" value="{{articleImg}}">
+  </label><br><br>
+  <button type="submit">Добавить</button>
+</form>

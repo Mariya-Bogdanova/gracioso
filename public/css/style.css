@@ -1,20 +1,24 @@
 body {
   padding: 10px;
 }
+
+main,
+header,
+#confidentially,
+.ulShopInfo,
+.flex {
+  display: flex;
+}
+
+#aboutUs {
+  width: 200px;
+}
+
+/* header */
 header {
   justify-content: space-between;
   padding: 10px;
   background-color: rgb(211, 244, 255);
-}
-main,
-header,
-#confidentially {
-  display: flex;
-}
-
-.shopLi {
-  display: flex;
-  margin: 20px;
 }
 #confidentially {
   flex-direction: column;
@@ -22,10 +26,68 @@ header,
   list-style-type: none;
   margin: 10px;
 }
+
 #confidentially li {
   margin: 3px;
   color: darkred;
 }
+
 #info {
-font-style: italic;
+  font-style: italic;
+}
+#output {
+  width: 200px;
+}
+.thumb{
+  width: 100%;
+}
+/* информация о блоке shopList */
+.aAdmin {
+  margin: 40px;
+}
+#shopList {
+  width: 80%;
+}
+.shopLi {
+  list-style-type: none;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgb(237, 253, 237);
+}
+
+.imgShop {
+  padding-top: 5px;
+  width: 300px;
+  min-width: 300px;
+  max-height: 500px;
+}
+.imgShop img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.ulShopInfo {
+  width: 60%;
+  list-style-type: none;
+  flex-direction: column;
+}
+/* информация текстом справа от картинки */
+.bid,
+.article {
+  align-self: flex-end;
+}
+.article {
+  font-style: italic;
+}
+.title {
+  margin-left: 10px;
+  font: italic bold 24px fantasy;
+}
+.ulShopInfo li {
+  margin: 5px;
+}
+.description {
+  min-height: 170px;
+  text-align: justify;
+  text-indent: 10%;
 }

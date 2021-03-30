@@ -29,16 +29,27 @@
   </div>
 
   <ul id="shopList">
-      {{#each articles}}
+    {{#each articles}}
+    <br>
     <li class="shopLi">
-      <img src="{{articleImg}}" alt="{{articleTitle}}">
-      <ul>
-        <li>{{articleArticle}}</li>
-        <li>{{articleTitle}}</li>
-        <li>{{articleDescription}}</li>
-        <li>{{articlePrice}} у.е.</li>
-        <li><a href="">Оставить заявку</a></li>
+      {{!-- {{#if ../adminName}} --}}
+      <a class="aAdmin" href="/article/{{id}}">Изменить</a>
+      <a class="aAdmin" href="">Удалить</a>
+      <br>
+      {{!-- {{/if}} --}}
+      <div class="flex">
+      <div class="imgShop">
+        <img src="{{articleImg}}" alt="{{articleTitle}}">
+      </div>
+
+      <ul class="ulShopInfo">
+        <li class="article">артикул: {{articleArticle}}</li>
+        <li class="title">{{articleTitle}}</li>
+        <li class="description">{{articleDescription}}</li>
+        <li class="price">{{articlePrice}} у.е.</li>
+        <li class="bid"><a href="">Оставить заявку</a></li>
       </ul>
+      </div>
     </li>
     {{/each}}
   </ul>

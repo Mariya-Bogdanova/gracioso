@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gracioso</title>
   <script defer src="/js/signin.js"></script>
+   <script defer src="/js/newArticle.js"></script>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -18,7 +19,7 @@
       <H2>Неповторимый стиль твоего дома</H2>
     </div>
     <ul id="confidentially">
-      {{#if adminName}}
+      {{!-- {{#if adminName}} --}}
       <li id="info">
         конфиденциальная информация
       </li>
@@ -28,7 +29,7 @@
       <li>
         <a href="/admin/signout">Выйти</a>
       </li>
-      {{/if}}
+      {{!-- {{/if}} --}}
     </ul>
   </header>
   {{{body}}}
