@@ -1,18 +1,25 @@
-<form action="/article/{{id}}" method="put" enctype="multipart/form-data" name="updateArticleForm">
-  <input type="hidden" name="_method" value="put">
+<form action="/article/{{article.id}}" method="post" enctype="multipart/form-data" name="updateArticleForm">
 
   <label for="articleTitle">Название:<br>
-    <input id="articleTitle" name="articleTitle" type="text" required value="{{articleTitle}}">
+    <input id="articleTitle" name="articleTitle" type="text" required value="{{article.articleTitle}}">
   </label><br><br>
+
   <label for="articleDescription">Описание:<br>
-    <textarea cols="20" rows="5" id="articleDescription" name="articleDescription" type="text" required >{{articleDescription}}</textarea>
+    <textarea cols="20" rows="5" id="articleDescription" name="articleDescription" type="text"
+      required>{{article.articleDescription}}</textarea>
   </label><br><br>
+
   <label for="articlePrice">Цена:<br>
-    <input id="articlePrice" name="articlePrice"  type="number" required value="{{articlePrice}}">
+    <input id="articlePrice" name="articlePrice" type="number" required value="{{article.articlePrice}}">
   </label><br><br>
 
   <label for="articleImg">Фото:<br>
-    <input type="file" name="articleImg" required id="articleImg" value="{{articleImg}}">
+    <input type="file" name="articleImg" required id="articleImg"  accept="image/*">
   </label><br><br>
+
+  <div id="output">
+
+    <img class="thumb" src="{{article.articleImg}}" alt="{{article.articleTitle}}">
+  </div>
   <button type="submit">Добавить</button>
 </form>

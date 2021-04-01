@@ -1,5 +1,9 @@
 <main>
   <div id="aboutUs">
+      {{!-- {{#if adminName}} --}}
+      <a href="/admin/info">Изменить</a>
+      <br>
+      {{!-- {{/if}} --}}
     <div>
       <h3>О нас</h3>
       <ul>
@@ -34,7 +38,7 @@
     <li class="shopLi">
       {{!-- {{#if ../adminName}} --}}
       <a class="aAdmin" href="/article/{{id}}">Изменить</a>
-      <a class="aAdmin" href="">Удалить</a>
+      <a id="aDelete" class="aAdmin" href="/article/{{id}}">Удалить</a>
       <br>
       {{!-- {{/if}} --}}
       <div class="flex">

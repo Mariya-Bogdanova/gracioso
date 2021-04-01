@@ -8,7 +8,17 @@ const logger = console;
 function failAuth(res) {
   return res.status(401).end();
 }
+// изменение информации о магазине - переход на форму создания
+router.route('/info')
+  .get((req, res) => {
+    try {
+      return res.render('aboutUsForm', {numberId: "0", box1: 'box0A',  box2: 'box0B'});
+    } catch (err) {
+      console.error(err.message);
+    }
+  })
 
+//аутентификация админа
 router
   .route('/signin')
   .post(async (req, res) => {
@@ -29,7 +39,7 @@ router
     }
     return res.end();
   });
-
+// выход админа
 router.get('/signout', (req, res, next) => {
   req.session.destroy((err) => {
     if (err) {
@@ -40,6 +50,7 @@ router.get('/signout', (req, res, next) => {
   });
 });
 
+//вход для админа
 router.route('/:admin')
   .get((req, res) => {
     try {

@@ -1,0 +1,33 @@
+<form action="/admin/info" method="post" name="aboutUsForm">
+
+  <div class="boxInputs" id="box1">
+    <input id="inputAboutUs" name="inputAboutUs" type="text" placeholder="О нас">
+    <div class="boxUl">
+        <input id="liAboutUs{{numberId}}{{box1}}" name="liAboutUs{{numberId}}{{box}}" type="text" >
+    </div>
+    <button class="button1AboutUs">Добавить еще</button>
+  </div><br><br>
+
+
+  <div class="boxInputs" id="box2">
+    <input id="inputOurMasters" name="inputOurMasters" type="text" placeholder="Наши Мастера">
+    <div class="boxUl">
+        <input id="liAboutUs{{numberId}}{{box2}}" name="liAboutUs{{numberId}}{{box}}" type="text" >
+    </div>
+    <button class="button1AboutUs">Добавить еще</button>
+  </div><br><br>
+
+
+  <div class="boxInputs" id="box3">
+    <input id="inputСontacts" name="inputСontacts" type="text" placeholder="Контакты">
+    <div class="boxUl">
+      <input id="adminTel" name="adminTel" type="tel" required>
+      <input id="adminMail" name="adminMail" type="email" required>
+    </div>
+    <button class="button1AboutUs">Добавить еще</button>
+  </div><br><br>
+
+  <br><br>
+
+  <button type="submit">Добавить</button>
+</form>

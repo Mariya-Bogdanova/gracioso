@@ -6,12 +6,17 @@ main,
 header,
 #confidentially,
 .ulShopInfo,
-.flex {
+.flex,
+.boxUl,
+.boxInputs {
   display: flex;
 }
-
+.boxUl{
+  flex-direction: column;
+}
 #aboutUs {
   width: 200px;
+  padding-top: 50px;
 }
 
 /* header */
@@ -41,6 +46,7 @@ header {
 .thumb{
   width: 100%;
 }
+
 /* информация о блоке shopList */
 .aAdmin {
   margin: 40px;

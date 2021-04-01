@@ -1,8 +1,3 @@
-function failSignin(newArticleForm) {
-  newArticleForm.articleImg.setCustomValidity('Выберите именно изображение');
-  newArticleForm.articleImg.reportValidity();
-}
-
 function handleFileSelect(event) {
   const files = event.target.files;
   const file = files[0];
