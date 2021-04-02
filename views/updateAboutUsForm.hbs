@@ -1,0 +1,36 @@
+<form action="/admin/info" method="post" name="updateAboutUsForm">
+  {{#each infoAboutUs}}
+  <div class="boxInputs" id="box1">
+    <input id="inputAboutUs" name="inputAboutUs" type="text" placeholder="О нас" value="{{inputAboutUs}}">
+    <div class="boxUl">
+     AAAAAAAAAAAAAAAAAA {{getInputs number}}
+    </div>
+    <button class="button1AboutUs">Добавить еще</button>
+  </div><br><br>
+
+
+  <div class="boxInputs" id="box2">
+    <input id="inputOurMasters" name="inputOurMasters" type="text" placeholder="Наши Мастера"
+      value="{{inputOurMasters}}">
+    <div class="boxUl">
+    {{getInputs number}}
+    </div>
+    <button class="button1AboutUs">Добавить еще</button>
+  </div><br><br>
+
+
+  <div class="boxInputs" id="box3">
+    <input id="inputСontacts" name="inputСontacts" type="text" placeholder="Контакты" value="{{inputOurMasters}}">
+    <div class="boxUl">
+      <input id="adminTel" name="adminTel" type="tel" value="{{adminTel}}">
+      <input id="adminMail" name="adminMail" type="email" value="{{adminMail}}">
+      {{getInputs number}}
+    </div>
+    <button class="button1AboutUs">Добавить еще</button>
+  </div><br><br>
+
+  <br><br>
+
+  <button type="submit">Добавить</button>
+  {{/each}}
+</form>

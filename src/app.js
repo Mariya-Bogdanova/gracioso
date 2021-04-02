@@ -5,6 +5,7 @@ import session from 'express-session';
 import sessionFileStore from 'session-file-store';
 import cookieParser from 'cookie-parser';
 import methodOverride from 'method-override';
+import fs from 'fs';
 import '../misc/env.js'
 import '../misc/db.js';
 import articleRouter from './routes/articleRouter.js';
@@ -17,6 +18,15 @@ import errorMiddleware from '../middlewares/error.js';
 
 const app = express();
 const FileStore = sessionFileStore(session);
+
+hbs.registerHelper("getInputs", (sumInputs) => {
+  let str = '';
+  const inputHbs = fs.readFileSync('views/partials/input.hbs', 'utf8');
+  for (let i = 0; i < sumInputs; i++) {
+    str += inputHbs;
+  }
+  return str;
+})
 
 hbs.registerPartials(path.join(process.env.PWD, 'views', 'partials'));
 app.set('view engine', 'hbs');

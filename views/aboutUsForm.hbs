@@ -1,25 +1,25 @@
 <form action="/admin/info" method="post" name="aboutUsForm">
 
   <div class="boxInputs" id="box1">
-    <input id="inputAboutUs" name="inputAboutUs" type="text" placeholder="О нас">
+    <input id="inputAboutUs" name="inputAboutUs" type="text" placeholder="О нас" required>
     <div class="boxUl">
-        <input id="liAboutUs{{numberId}}{{box1}}" name="liAboutUs{{numberId}}{{box}}" type="text" >
+      <input id="liAboutUs{{numberId}}{{box1}}" name="liAboutUs{{numberId}}{{box1}}" type="text" required>
     </div>
     <button class="button1AboutUs">Добавить еще</button>
   </div><br><br>
 
 
   <div class="boxInputs" id="box2">
-    <input id="inputOurMasters" name="inputOurMasters" type="text" placeholder="Наши Мастера">
+    <input id="inputOurMasters" name="inputOurMasters" type="text" placeholder="Наши Мастера" required>
     <div class="boxUl">
-        <input id="liAboutUs{{numberId}}{{box2}}" name="liAboutUs{{numberId}}{{box}}" type="text" >
+      <input id="liAboutUs{{numberId}}{{box2}}" name="liAboutUs{{numberId}}{{box2}}" type="text" required>
     </div>
     <button class="button1AboutUs">Добавить еще</button>
   </div><br><br>
 
 
   <div class="boxInputs" id="box3">
-    <input id="inputСontacts" name="inputСontacts" type="text" placeholder="Контакты">
+    <input id="inputСontacts" name="inputСontacts" type="text" placeholder="Контакты" required>
     <div class="boxUl">
       <input id="adminTel" name="adminTel" type="tel" required>
       <input id="adminMail" name="adminMail" type="email" required>

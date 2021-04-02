@@ -1,10 +1,7 @@
-// const button1AboutUs = document.getElementById('button1AboutUs');
-// const boxUl = document.getElementById('boxUl');
-
 document.forms.aboutUsForm?.addEventListener('click', async (event) => {
   try {
-    event.preventDefault();
     if (event.target.className === 'button1AboutUs') {
+      event.preventDefault();
       const boxNumber = event.target.parentElement.id;
       const response = await fetch('/partials/input.hbs');
       const hbs = await response.text();
@@ -14,7 +11,6 @@ document.forms.aboutUsForm?.addEventListener('click', async (event) => {
       const input = template({ numberId: inputID, box: boxNumber });
       boxUl.insertAdjacentHTML('beforeend', input);
     }
-    // return window.location.assign('/');
   } catch (err) {
     console.error(err.message);
   }

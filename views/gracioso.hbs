@@ -1,35 +1,43 @@
+
+
 <main>
+ {{getInputs number}}
   <div id="aboutUs">
-      {{!-- {{#if adminName}} --}}
-      <a href="/admin/info">Изменить</a>
-      <br>
-      {{!-- {{/if}} --}}
+    {{!-- {{#if adminName}} --}}
+    <a id="updateInfoA" href="/admin/infoU">Изменить</a>
+    <br>
+    {{!-- {{/if}} --}}
+    {{#each infoAboutUs}}
     <div>
-      <h3>О нас</h3>
+      <h3>
+        {{inputAboutUs}}
+      </h3>
       <ul>
-        <li>Уникальные предметы вашего интерьера</li>
-        <li>Ручная работа</li>
-        <li>Каждое произведение в одном экземпляре</li>
+        {{#each liAboutUs1}}
+        <li>{{this}}</li>
+        {{/each}}
       </ul>
     </div>
     <div>
-      <h3>Наши Мастера</h3>
+      <h3> {{inputOurMasters}}</h3>
       <ul>
-        <li>Василий Гречанинов</li>
-        <li>Мержоян Калосто</li>
-        <li>Инь Ли</li>
-        <li>Джон Браун</li>
-        <li>Мария Крамаева</li>
+        {{#each liAboutUs2}}
+        <li>{{this}}</li>
+        {{/each}}
       </ul>
     </div>
     <div>
-      <h3>Контакты</h3>
+      <h3>{{inputСontacts}}</h3>
       <ul>
-        <li>8 (904) 556-55-66</li>
-        <li>gracioso@mail.com</li>
+        <li>{{adminTel}}</li>
+        <li>{{adminMail}}</li>
+        {{#each liAboutUs3}}
+        <li>{{this}}</li>
+        {{/each}}
       </ul>
       <p></p>
     </div>
+    {{/each}}
   </div>
 
   <ul id="shopList">
@@ -42,17 +50,17 @@
       <br>
       {{!-- {{/if}} --}}
       <div class="flex">
-      <div class="imgShop">
-        <img src="{{articleImg}}" alt="{{articleTitle}}">
-      </div>
+        <div class="imgShop">
+          <img src="{{articleImg}}" alt="{{articleTitle}}">
+        </div>
 
-      <ul class="ulShopInfo">
-        <li class="article">артикул: {{articleArticle}}</li>
-        <li class="title">{{articleTitle}}</li>
-        <li class="description">{{articleDescription}}</li>
-        <li class="price">{{articlePrice}} у.е.</li>
-        <li class="bid"><a href="">Оставить заявку</a></li>
-      </ul>
+        <ul class="ulShopInfo">
+          <li class="article">артикул: {{articleArticle}}</li>
+          <li class="title">{{articleTitle}}</li>
+          <li class="description">{{articleDescription}}</li>
+          <li class="price">{{articlePrice}} у.е.</li>
+          <li class="bid"><a href="">Оставить заявку</a></li>
+        </ul>
       </div>
     </li>
     {{/each}}
