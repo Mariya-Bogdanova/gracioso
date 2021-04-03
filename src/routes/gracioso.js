@@ -6,11 +6,10 @@ const router = express.Router();
 router.route('/')
   .get(async (req, res) => {
     try {
-      const number = 3;
       const adminName = res.locals.adminName;
       const articles = await ArticleModel.find();
       const infoAboutUs = await InfoModel.find();
-      res.render('gracioso', { articles, adminName, infoAboutUs, number })
+      res.render('gracioso', { articles, adminName, infoAboutUs })
     } catch (err) {
       console.error(err.message);
     }
