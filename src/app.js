@@ -13,7 +13,6 @@ import graciosoRouter from './routes/gracioso.js';
 import loginMiddleware from '../middlewares/locals.js';
 import notFoundMiddleware from '../middlewares/notfound.js';
 import errorMiddleware from '../middlewares/error.js';
-// import methodOverrideMiddleware from '../middlewares/methodOverride.js';
 
 const app = express();
 const FileStore = sessionFileStore(session);
@@ -38,22 +37,20 @@ const sessionConfig = {
   resave: false,
   saveUninitialized: false,
   cookie: {
-    expires: 1000 * 1,
+    expires: 1000 * 60 * 15,
     secure: process.env.NODE_ENV === 'production',
   },
 };
 app.use(session(sessionConfig));
 
 app.use(loginMiddleware);
-// app.use(methodOverrideMiddleware);
-
-// app.use(methodOverride((req, res) => {
-//   if (req.body && typeof req.body === 'object' && '_method' in req.body) {
-//     const method = req.body._method;
-//     delete req.body._method;
-//     return method;
-//   }
-// }));
+app.use(methodOverride((req, res) => {
+  if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+    const method = req.body._method;
+    delete req.body._method;
+    return method;
+  }
+}));
 
 app.use('/admin', adminRouter);
 app.use('/article', articleRouter);

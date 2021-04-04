@@ -1,17 +1,34 @@
+<h3>Добавление нового артикля:</h3>
 <form action="/article" method="POST" enctype="multipart/form-data" name="newArticleForm">
-  <label for="articleTitle">Название:<br>
-    <input id="articleTitle" name="articleTitle" type="text" required>
-  </label><br><br>
-  <label for="articleDescription">Описание:<br>
-    <textarea cols="20" rows="5" id="articleDescription" name="articleDescription" type="text" required></textarea>
-  </label><br><br>
-  <label for="articlePrice">Цена:<br>
-    <input id="articlePrice" name="articlePrice" type="number" required>
-  </label><br><br>
 
-  <label for="articleImg">Фото:<br>
-    <input type="file" name="articleImg" required id="articleImg" accept="image/*">
-  </label><br><br>
-  <div id="output"></div>
-  <button type="submit">Добавить</button>
+  <div id="contentBox">
+
+    <div>
+      <label for="articleImg">Фото:<br>
+        <input type="file" name="articleImg" required id="articleImg" accept="image/*">
+      </label>
+      <div id="output">
+        <img class="thumb" src="/uploads/photo.png" alt="">
+      </div>
+    </div>
+
+    <div>
+      <div class="articleForm">
+        <label for="articleTitle">Название:<br>
+          <input id="articleTitle" name="articleTitle" type="text" required>
+        </label>
+        <label for="articlePrice">Цена:<br>
+          <input id="articlePrice" name="articlePrice" type="number" required>
+        </label>
+      </div>
+
+      <label for="articleDescription">Описание:<br>
+        <textarea cols="50%" rows="15" id="articleDescription" name="articleDescription" type="text"
+          required></textarea>
+      </label>
+
+    </div>
+  </div>
+
+  <button type="submit">Опубликовать</button>
 </form>

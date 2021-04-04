@@ -1,32 +1,34 @@
+<h3>Изменение информации о продавце:</h3>
 <form action="" method="post" name="updateAboutUsForm">
   <input type="hidden" name="_method" value="put">
-  <div class="boxInputs" id="box1">
-    <input id="inputAboutUs" name="inputAboutUs" type="text" placeholder="О нас" value="{{infoAboutUs.inputAboutUs}}">
-    <div class="boxUl">
-      {{getInputs number1 box1 ulInputs}}
+  <div id="contentBox">
+    <div class="boxInputs" id="box1">
+      <input id="inputAboutUs" name="inputAboutUs" type="text" placeholder="О нас" value="{{infoAboutUs.inputAboutUs}}">
+      <div class="boxUl">
+        {{getInputs number1 box1 ulInputs}}
+      </div>
+      <button class="button1AboutUs">Добавить еще</button>
     </div>
-    <button class="button1AboutUs">Добавить еще</button>
-  </div><br><br>
 
-  <div class="boxInputs" id="box2">
-    <input id="inputOurMasters" name="inputOurMasters" type="text" placeholder="Наши Мастера"
-      value="{{infoAboutUs.inputOurMasters}}">
-    <div class="boxUl">
-      {{getInputs number2 box2 ulInputs}}
+    <div class="boxInputs" id="box2">
+      <input id="inputOurMasters" name="inputOurMasters" type="text" placeholder="Наши Мастера"
+        value="{{infoAboutUs.inputOurMasters}}">
+      <div class="boxUl">
+        {{getInputs number2 box2 ulInputs}}
+      </div>
+      <button class="button1AboutUs">Добавить еще</button>
     </div>
-    <button class="button1AboutUs">Добавить еще</button>
-  </div><br><br>
 
-  <div class="boxInputs" id="box3">
-    <input id="inputСontacts" name="inputСontacts" type="text" placeholder="Контакты"
-      value="{{infoAboutUs.inputOurMasters}}">
-    <div class="boxUl">
-      <input id="adminTel" name="adminTel" type="tel" value="{{infoAboutUs.adminTel}}">
-      <input id="adminMail" name="adminMail" type="email" value="{{infoAboutUs.adminMail}}">
-      {{getInputs number3 box3 ulInputs}}
+    <div class="boxInputs" id="box3">
+      <input id="inputСontacts" name="inputСontacts" type="text" placeholder="Контакты"
+        value="{{infoAboutUs.inputСontacts}}">
+      <div class="boxUl">
+        <input id="adminTel" name="adminTel" type="tel" value="{{infoAboutUs.adminTel}}">
+        <input id="adminMail" name="adminMail" type="email" value="{{infoAboutUs.adminMail}}">
+        {{getInputs number3 box3 ulInputs}}
+      </div>
+      <button class="button1AboutUs">Добавить еще</button>
     </div>
-    <button class="button1AboutUs">Добавить еще</button>
-  </div><br><br>
-  <br><br>
-  <button type="submit">Добавить</button>
+  </div>
+  <button type="submit">Изменить</button>
 </form>

@@ -1,0 +1,54 @@
+form,
+#contentBox,
+.articleForm,
+.boxInputs {
+  display: flex;
+}
+form,
+.boxInputs {
+  flex-direction: column;
+}
+form {
+  padding: 11px;
+  margin: 10px auto;
+  width: 90%;
+  background-color: rgb(248, 240, 168);
+  box-shadow: 0 0 10px rgb(243, 255, 71);
+}
+#contentBox {
+  justify-content: space-around;
+}
+
+.articleForm {
+  justify-content: space-between;
+}
+
+#output {
+  margin: 5px;
+  height: 290px;
+}
+
+.thumb {
+  height: 100%;
+}
+label {
+  margin: 12px 0px;
+}
+button {
+  margin: 10px;
+  background-color: rgb(214, 200, 200);
+}
+#articlePrice {
+  width: 100px;
+}
+#articleTitle {
+  width: 300px;
+}
+.boxInputs input {
+  width: 315px;
+}
+#inputСontacts,
+#inputOurMasters,
+#inputAboutUs {
+  font-weight: bold;
+}

@@ -25,7 +25,6 @@ router.route('/')
   // принять созданный новый артикль
   .post(upload.single('articleImg'), async (req, res, next) => {
     try {
-      // const filedata = req.file;
       const { path } = req.file;
       const { articleTitle, articleDescription, articlePrice } = req.body;
       const newArticle = await new ArticleModel({ articleTitle, articleDescription, articlePrice, articleImg: path.substr(6), }).save();
@@ -49,22 +48,25 @@ router.route('/:id')
   .put(upload.single('articleImg'), async (req, res) => {
     try {
       const { articleTitle, articleDescription, articlePrice } = req.body;
-      const { path } = req.file;
-      await ArticleModel.findByIdAndUpdate(req.params.id, { articleTitle, articleDescription, articlePrice, articleImg: path.substr(6), })
+      await ArticleModel.findByIdAndUpdate(req.params.id, { articleTitle, articleDescription, articlePrice })
+      if (req.file) {
+        const { path } = req.file;
+        await ArticleModel.findByIdAndUpdate(req.params.id, { articleImg: path.substr(6), })
+      }
       res.json('ок')
     } catch (err) {
       console.error(err.message);
     }
   })
-    // удалить артикль
-    .delete(async (req, res) => {
-      try {
-        await ArticleModel.findByIdAndDelete(req.params.id)
-        res.json('ок')
-      } catch (err) {
-        console.error(err.message);
-      }
-    })
+  // удалить артикль
+  .delete(async (req, res) => {
+    try {
+      await ArticleModel.findByIdAndDelete(req.params.id)
+      res.json('ок')
+    } catch (err) {
+      console.error(err.message);
+    }
+  })
 
 export default router;
 

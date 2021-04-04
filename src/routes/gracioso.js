@@ -1,6 +1,7 @@
 import express from 'express';
-import ArticleModel from '../../models/article.js'
-import InfoModel from '../../models/info.js'
+import ArticleModel from '../../models/article.js';
+import InfoModel from '../../models/info.js';
+
 const router = express.Router();
 
 router.route('/')
@@ -14,13 +15,7 @@ router.route('/')
       console.error(err.message);
     }
   })
-// .post((req, res) => {
-//   try {
-//     res.render('gracioso')
-//   } catch (err) {
-//     console.error(err.message);
-//   }
-// })
+
 export default router;
 
 

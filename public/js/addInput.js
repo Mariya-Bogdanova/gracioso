@@ -1,11 +1,11 @@
-document.forms.aboutUsForm?.addEventListener('click', async (event) => {
+document.forms.aboutUsForm?.addEventListener('click',(event) => {
   try {
     addInputs(event)
   } catch (err) {
     console.error(err.message);
   }
 })
-document.forms.updateAboutUsForm?.addEventListener('click', async (event) => {
+document.forms.updateAboutUsForm?.addEventListener('click',(event) => {
   try {
     addInputs(event)
   } catch (err) {

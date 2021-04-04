@@ -12,6 +12,7 @@
   <script defer src="/js/addInput.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/form.css">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
       <H2>Неповторимый стиль твоего дома</H2>
     </div>
     <ul id="confidentially">
-      {{!-- {{#if adminName}} --}}
+      {{#if adminName}}
       <li id="info">
         конфиденциальная информация
       </li>
@@ -32,7 +33,7 @@
       <li>
         <a href="/admin/signout">Выйти</a>
       </li>
-      {{!-- {{/if}} --}}
+      {{/if}}
     </ul>
   </header>
   {{{body}}}

@@ -1,4 +1,4 @@
-const aDelete = document.getElementById('aDelete');
+const shopList = document.getElementById('shopList');
 
 document.forms.updateArticleForm?.addEventListener('submit', async (event) => {
   try {
@@ -13,13 +13,15 @@ document.forms.updateArticleForm?.addEventListener('submit', async (event) => {
   }
 });
 
-aDelete?.addEventListener('click', async (event) => {
+shopList?.addEventListener('click', async (event) => {
   try {
-    event.preventDefault();
-    const response = await fetch(event.target.href, {
-      method: 'DELETE',
-    });
-    return window.location.assign('/');
+    if (event.target.className === 'aDelete') {
+      event.preventDefault();
+      const response = await fetch(event.target.href, {
+        method: 'DELETE',
+      });
+      return window.location.assign('/');
+    }
   } catch (err) {
     console.error(err.message);
   }

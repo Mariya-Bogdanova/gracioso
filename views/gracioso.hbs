@@ -1,12 +1,12 @@
 <main>
   <div id="aboutUs">
-    {{!-- {{#if adminName}} --}}
-    <a id="createInfoA" href="/admin/info">Создать заново</a>
+    {{#if adminName}}
+    <a id="createInfoA" href="/admin/info">Создать заново</a><br>
     <a id="updateInfoA" href="/admin/infoU">Изменить</a>
     <br>
-    {{!-- {{/if}} --}}
+    {{/if}}
     {{#each infoAboutUs}}
-    <div>
+    <div class="infoBox">
       <h3>
         {{inputAboutUs}}
       </h3>
@@ -16,7 +16,7 @@
         {{/each}}
       </ul>
     </div>
-    <div>
+    <div class="infoBox">
       <h3> {{inputOurMasters}}</h3>
       <ul>
         {{#each liAboutUs2}}
@@ -24,7 +24,7 @@
         {{/each}}
       </ul>
     </div>
-    <div>
+    <div class="infoBox">
       <h3>{{inputСontacts}}</h3>
       <ul>
         <li>{{adminTel}}</li>
@@ -42,11 +42,11 @@
     {{#each articles}}
     <br>
     <li class="shopLi">
-      {{!-- {{#if ../adminName}} --}}
+      {{#if ../adminName}}
       <a class="aAdmin" href="/article/{{id}}">Изменить</a>
-      <a id="aDelete" class="aAdmin" href="/article/{{id}}">Удалить</a>
+      <a class="aDelete" class="aAdmin" href="/article/{{id}}">Удалить</a>
       <br>
-      {{!-- {{/if}} --}}
+      {{/if}}
       <div class="flex">
         <div class="imgShop">
           <img src="{{articleImg}}" alt="{{articleTitle}}">
@@ -57,7 +57,7 @@
           <li class="title">{{articleTitle}}</li>
           <li class="description">{{articleDescription}}</li>
           <li class="price">{{articlePrice}} у.е.</li>
-          <li class="bid"><a href="">Оставить заявку</a></li>
+          {{!-- <li class="bid"><a href="">Оставить заявку</a></li> --}}
         </ul>
       </div>
     </li>

@@ -1,5 +1,6 @@
 body {
   padding: 10px;
+  background-color: rgb(219, 76, 57);
 }
 
 main,
@@ -7,11 +8,11 @@ header,
 #confidentially,
 .ulShopInfo,
 .flex,
-.boxUl,
-.boxInputs {
+.boxUl {
   display: flex;
 }
-.boxUl{
+
+.boxUl {
   flex-direction: column;
 }
 #aboutUs {
@@ -23,7 +24,8 @@ header,
 header {
   justify-content: space-between;
   padding: 10px;
-  background-color: rgb(211, 244, 255);
+  background-color: rgb(163, 5, 5);
+  border: ridge white 3px;
 }
 #confidentially {
   flex-direction: column;
@@ -34,19 +36,17 @@ header {
 
 #confidentially li {
   margin: 3px;
-  color: darkred;
 }
 
 #info {
   font-style: italic;
 }
-#output {
-  width: 200px;
+.infoBox {
+  margin: 30px 0px;
 }
-.thumb{
-  width: 100%;
+#aboutUs li {
+  list-style-type: none;
 }
-
 /* информация о блоке shopList */
 .aAdmin {
   margin: 40px;
@@ -57,7 +57,7 @@ header {
 .shopLi {
   list-style-type: none;
   padding: 20px;
-  margin: 20px;
+  margin: 2px 20px;
   background-color: rgb(237, 253, 237);
 }
 
@@ -76,6 +76,7 @@ header {
   width: 60%;
   list-style-type: none;
   flex-direction: column;
+  justify-content: space-around;
 }
 /* информация текстом справа от картинки */
 .bid,
@@ -93,7 +94,26 @@ header {
   margin: 5px;
 }
 .description {
-  min-height: 170px;
+  min-height: 114px;
   text-align: justify;
   text-indent: 10%;
+}
+input,
+textarea,
+button,
+form{
+  border-radius: 5px;
+}
+input, button{
+  border: white;
+  height: 25px;
+}
+input{
+  margin: 2px;
+}
+textarea{
+  border: white;
+}
+a{
+  color: rgb(4, 59, 14);
 }
