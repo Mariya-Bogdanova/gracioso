@@ -9,10 +9,12 @@ import '../misc/env.js'
 import '../misc/db.js';
 import articleRouter from './routes/articleRouter.js';
 import adminRouter from './routes/adminRouter.js';
+import infoRouter from './routes/infoRouter.js';
 import graciosoRouter from './routes/gracioso.js';
 import loginMiddleware from '../middlewares/locals.js';
 import notFoundMiddleware from '../middlewares/notfound.js';
 import errorMiddleware from '../middlewares/error.js';
+import authMiddleware from '../middlewares/auth.js';
 
 const app = express();
 const FileStore = sessionFileStore(session);
@@ -52,11 +54,16 @@ app.use(methodOverride((req, res) => {
   }
 }));
 
-app.use('/admin', adminRouter);
-app.use('/article', articleRouter);
 app.use('/', graciosoRouter);
+app.use('/admin', adminRouter);
+
+app.use(authMiddleware);
+app.use('/info', infoRouter);
+app.use('/article', articleRouter);
 
 app.use(notFoundMiddleware);
 app.use(errorMiddleware);
 app.listen(process.env.PORT ?? 3000);
+
+
 

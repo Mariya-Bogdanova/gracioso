@@ -35,7 +35,7 @@ router.route('/')
   })
 
 router.route('/:id')
-  // форма для изменения новыго артикля
+  // форма для изменения артикля
   .get(async (req, res) => {
     try {
       const article = await ArticleModel.findById(req.params.id)
